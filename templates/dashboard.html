@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>顧客一覧</title>
+</head>
+<body>
+    <h2>顧客リスト</h2>
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer.name }}（最終来店日：{{ customer.last_visit }}）</li>
+        {% endfor %}
+    </ul>
+    <a href="/karte">新しいカルテを書く</a><br>
+    <a href="/logout">ログアウト</a>
+</body>
+</html>

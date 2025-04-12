@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>カルテ一覧</title>
+    <style>
+        img {
+            width: 300px;
+            margin: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>保存されたカルテ画像一覧</h2>
+    {% for image in images %}
+        <div>
+            <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Karte image">
+        </div>
+    {% endfor %}
+    <br>
+    <a href="/dashboard">← ダッシュボードに戻る</a>
+</body>
+</html>
